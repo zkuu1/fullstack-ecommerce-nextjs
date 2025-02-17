@@ -8,6 +8,7 @@ export default function Home() {
       
       <Button>Click me</Button>
       <h2>Zkuu Raja Iblis</h2>
+      <h1>Test</h1>
     </div>
   );
 }
