@@ -20,6 +20,19 @@ const getCategory = async () => {
   }
 };
 
+const getSliders =  async () => {
+  try {
+ const response =  await axiosClient.get("/sliders?populate=*");
+ console.log("API Response:", response.data);
+ return response.data;
+} catch (error) {
+ console.error("Error fetching categories:", error.response?.data || error.message);
+ throw error;
+}
+}
+
+
 export default {
   getCategory,
+  getSliders,
 };
