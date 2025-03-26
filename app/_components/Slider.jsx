@@ -34,37 +34,38 @@ function Slider() {
 
   if (loading) {
     return (
-      <div className="flex justify-center items-center h-[400px] max-w-screen-lg mx-auto">
-        <div className="w-[1000px] h-[400px] bg-gray-200 animate-pulse rounded-lg"></div>
+      <div className="flex justify-center items-center h-[450px] max-w-screen-lg mx-auto">
+        <div className="w-full h-[450px] bg-gray-200 animate-pulse rounded-lg"></div>
       </div>
     );
   }
 
   return (
-    <div className="max-w-screen-lg mx-auto">
-      <Carousel>
-        <CarouselContent>
-          {sliderList.map((slider, index) => (
-            <CarouselItem key={index} className="flex items-center justify-center">
-              {slider.icon?.[0]?.url ? (
-                <Image
-                  src={`${process.env.NEXT_PUBLIC_API_BASE_URL}${slider.icon[0].url}`}
-                  alt={slider.title || "Slider Image"}
-                  width={1000}
-                  height={400}
-                  priority
-                  className="rounded-lg object-cover"
-                />
-              ) : (
-                <p className="text-center">No Image Available</p>
-              )}
-            </CarouselItem>
-          ))}
-        </CarouselContent>
-        <CarouselPrevious />
-        <CarouselNext />
-      </Carousel>
-    </div>
+    <div className="w-full max-w-screen mx-auto px-6 md:px-12">
+    <Carousel>
+      <CarouselContent>
+        {sliderList.map((slider, index) => (
+          <CarouselItem key={index}>
+            {slider.icon?.[0]?.url ? (
+              <Image
+                src={`${process.env.NEXT_PUBLIC_API_BASE_URL}${slider.icon[0].url}`}
+                alt={slider.title || "Slider Image"}
+                width={1000}
+                height={400}
+                priority
+                className="w-full h-[300px] sm:h-[350px] md:h-[400px] lg:h-[450px] object-cover rounded-2xl"
+              />
+            ) : (
+              <p className="text-center">No Image Available</p>
+            )}
+          </CarouselItem>
+        ))}
+      </CarouselContent>
+      <CarouselPrevious />
+      <CarouselNext />
+    </Carousel>
+  </div>
+  
   );
 }
 

@@ -23,6 +23,8 @@ export default {
   				DEFAULT: '#31B65D',
   				foreground: 'hsl(var(--primary-foreground))'
   			},
+
+			'blue-custom': '#0899e7',
   			secondary: {
   				DEFAULT: 'hsl(var(--secondary))',
   				foreground: 'hsl(var(--secondary-foreground))'

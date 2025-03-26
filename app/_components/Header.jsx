@@ -44,7 +44,7 @@ const Header = () => {
               <LayoutGrid className="h-4 w-4" /> Category
             </h2>
           </DropdownMenuTrigger>
-          <DropdownMenuContent>
+          <DropdownMenuContent className="bg-blue-100 shadow-md rounded-md">
             <DropdownMenuLabel>Browse Category</DropdownMenuLabel>
             <DropdownMenuSeparator />
 
@@ -80,7 +80,7 @@ const Header = () => {
         <h2 className="flex gap-2 items-center text-lg">
           <ShoppingBag /> 0
         </h2>
-        <Button>Sign In</Button>
+        <Button className="bg-blue-custom">Sign In</Button>
       </div>
     </div>
   );
