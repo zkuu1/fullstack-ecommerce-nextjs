@@ -45,14 +45,14 @@ const CategoryList = () => {
           categoryList.map((category, index) => (
             <div
               key={index}
-              className="flex flex-col items-center gap-3 p-4 bg-blue-100 rounded-lg shadow-md transition-transform hover:scale-110"
+              className="flex flex-col items-center gap-3 p-4 bg-blue-100 rounded-lg shadow-md transition-transform group hover:bg-blue-400"
             >
               <Image
                 src={`${process.env.NEXT_PUBLIC_API_BASE_URL}${category.icon?.[0]?.url}`}
                 alt={category.name || "Category Image"}
                 width={50}
                 height={50}
-                className="rounded-full aspect-square"
+                className="group-hover:scale-125 transition-all rounded-full aspect-square"
               />
               <h2 className="text-center text-base font-semibold">{category.name || "No Name"}</h2>
             </div>

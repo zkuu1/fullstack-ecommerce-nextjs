@@ -29,10 +29,23 @@ const getSliders =  async () => {
  console.error("Error fetching categories:", error.response?.data || error.message);
  throw error;
 }
-}
+};
+
+const getAllProducts = async () => {
+  try {
+    const response = await axiosClient.get("/products?populate=*");
+    console.log("API Response:", response.data);
+    return response.data;  
+  } catch (error) {
+    console.error("Error fetching products:", error.response?.data || error.message);
+    throw error;
+  }
+};
+
 
 
 export default {
   getCategory,
   getSliders,
+  getAllProducts
 };
