@@ -34,17 +34,18 @@ const CategoryList = () => {
   }
 
   return (
-    <div className="mt-5 w-full max-w-screen-xl mx-auto px-6 md:px-12">
+    <div className="w-full max-w-screen mx-auto px-6 md:px-12 mt-5 ">
       <h2 className="text-blue-custom font-bold text-2xl mb-4 text-center">
         Shop by Category
       </h2>
-      {/* Container dengan Flexbox */}
-      <div className="flex gap-6 p-4 overflow-x-auto lg:justify-center lg:flex-nowrap flex-wrap">
+      
+      {/* Grid Layout untuk Menampilkan Kategori */}
+      <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-7 gap-4 p-4">
         {categoryList.length > 0 ? (
           categoryList.map((category, index) => (
             <div
               key={index}
-              className="flex flex-col items-center gap-3 p-6 bg-blue-100 rounded-lg shadow-md transition-transform hover:scale-110 w-[700px] h-[180px]"
+              className="flex flex-col items-center gap-3 p-4 bg-blue-100 rounded-lg shadow-md transition-transform hover:scale-110"
             >
               <Image
                 src={`${process.env.NEXT_PUBLIC_API_BASE_URL}${category.icon?.[0]?.url}`}
