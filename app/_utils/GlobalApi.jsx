@@ -15,7 +15,6 @@ const getCategory = async () => {
     console.log("API Response:", response.data);
     return response.data;
   } catch (error) {
-    console.error("Error fetching categories:", error.response?.data || error.message);
     throw error;
   }
 };
@@ -26,7 +25,6 @@ const getSliders =  async () => {
  console.log("API Response:", response.data);
  return response.data;
 } catch (error) {
- console.error("Error fetching categories:", error.response?.data || error.message);
  throw error;
 }
 };
@@ -37,7 +35,6 @@ const getAllProducts = async () => {
     console.log("API Response:", response.data);
     return response.data;  
   } catch (error) {
-    console.error("Error fetching products:", error.response?.data || error.message);
     throw error;
   }
 };

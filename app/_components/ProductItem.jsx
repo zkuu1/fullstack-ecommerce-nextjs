@@ -19,9 +19,6 @@ const ProductItem = ({ product }) => {
             
             <h2 className="font-bold text-lg md:text-2xl text-center">{product.name}</h2>
             
-            <p className="text-sm md:text-base text-gray-600 text-center max-w-xs md:max-w-md">
-                {product.description}
-            </p>
 
             <div className="flex gap-3 items-center">
                 {/* Hanya tampilkan MRP jika ada */}

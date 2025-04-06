@@ -34,15 +34,12 @@ const Products = () => {
             <h2 className="text-blue-custom font-bold text-2xl mb-4 text-center">
                 Our Popular Products
             </h2>
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-4">
-                {productList.length > 0 ? (
-                    productList.map((product, index) => (
+            <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-5 md:gap-6">
+                    {productList.map((product, index) => (
                         <ProductItem key={index} product={product} />
-                    ))
-                ) : (
-                    <p className="text-center text-gray-500">No products available</p>
-                )}
+                    ))}
             </div>
+
         </div>
     );
 };
